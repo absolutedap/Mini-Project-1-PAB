@@ -12,7 +12,7 @@ Melalui aplikasi ini, pengguna dapat menambahkan, mengedit, dan menghapus tugas 
 - Jenis Tugas (Individu, Kelompok, Praktikum, UTS)
 - Status (Belum, Sedang Dikerjakan, Selesai)
 
-Aplikasi ini dibuat menggunakan konsep dasar Flutter seperti `StatefulWidget`, `Navigator`, `ListView.builder`, serta manajemen state menggunakan `setState()`.
+Aplikasi ini dibuat menggunakan konsep dasar Flutter seperti `StatefulWidget`, `GetX`, `ListView.builder`, serta manajemen state menggunakan `setState()`.
 
 ---
 
