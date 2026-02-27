@@ -84,7 +84,7 @@ class _HomePageState extends State<HomePage> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisSize: MainAxisSize.min,
                         children: [
-                          Text("Matkul: ${task.matkul}"),
+                          Text("Mata kuliah: ${task.matkul}"),
                           Text("Deadline: ${task.deadline}"),
                           const SizedBox(height: 8),
                           Container(
@@ -110,13 +110,7 @@ class _HomePageState extends State<HomePage> {
                             icon: const Icon(Icons.edit,
                                 color: Colors.blue),
                             onPressed: () async {
-                              final hasil = await Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) =>
-                                      AddTaskPage(task: task),
-                                ),
-                              );
+                              final hasil = await Get.to(() => AddTaskPage(task: task));
                               if (hasil != null) {
                                 editTask(index, hasil);
                               }
