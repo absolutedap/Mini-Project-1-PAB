@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../models/task_model.dart';
-
+import 'package:get/get.dart';
 class AddTaskPage extends StatefulWidget {
   final Task? task;
 
@@ -62,7 +62,6 @@ class _AddTaskPageState extends State<AddTaskPage> {
                 buildTextField(deadlineController, "Deadline"),
                 const SizedBox(height: 15),
 
-                // Dropdown Jenis Tugas
                 DropdownButtonFormField<String>(
                   initialValue: jenisTugasValue,
                   items: const [
@@ -85,7 +84,6 @@ class _AddTaskPageState extends State<AddTaskPage> {
 
                 const SizedBox(height: 15),
 
-                // Dropdown Status
                 DropdownButtonFormField<String>(
                   initialValue: statusValue,
                   items: const [
@@ -109,7 +107,6 @@ class _AddTaskPageState extends State<AddTaskPage> {
 
                 const SizedBox(height: 30),
 
-                // Tombol kecil & modern
                 Center(
                   child: SizedBox(
                     width: 170,
@@ -132,7 +129,7 @@ class _AddTaskPageState extends State<AddTaskPage> {
                           status: statusValue,
                         );
 
-                        Navigator.pop(context, task);
+                        Get.back(result: task);
                       },
                       icon: const Icon(Icons.save, size: 18),
                       label: const Text(

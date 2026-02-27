@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../models/task_model.dart';
 import 'add_task_page.dart';
+import 'package:get/get.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -136,12 +137,7 @@ class _HomePageState extends State<HomePage> {
       floatingActionButton: FloatingActionButton(
         backgroundColor: const Color.fromARGB(255, 12, 217, 244),
         onPressed: () async {
-          final hasil = await Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) => const AddTaskPage(),
-            ),
-          );
+          final hasil = await Get.to(() => const AddTaskPage());
 
           if (hasil != null) {
             tambahTask(hasil);
