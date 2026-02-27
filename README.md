@@ -27,7 +27,7 @@ Aplikasi ini dibuat menggunakan konsep dasar Flutter seperti `StatefulWidget`, `
   - Merah → Belum / Sedang Dikerjakan  
 - Dropdown untuk memilih jenis tugas  
 - Dropdown untuk memilih status tugas  
-- Navigasi antar halaman menggunakan Navigator  
+- Navigasi antar halaman menggunakan GetX  
 
 ---
 
@@ -60,8 +60,8 @@ Aplikasi ini dibuat menggunakan konsep dasar Flutter seperti `StatefulWidget`, `
 - `ElevatedButton.icon`
 - `IconButton`
 - `FloatingActionButton`
-- `Navigator.push()`
-- `Navigator.pop()`
+- `Get.to()`
+- `Get.back)`
 
 ### Styling
 - `BoxDecoration`
